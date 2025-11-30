@@ -1,2 +1,71 @@
+/* Your #CSS Code here. */
+.holder1{
+	display:flex;
+	justify-content:space-around;
+	}
+.item1{
+	display:flex;
+	background-color:green;
+		border: none;
+	padding:5PX;
+	width:100px;
+	height:100px;
+}
+.item2{
+	display:flex;
+	background-color:red;
+	padding:5px;
+	border:10px none;
+	width:100px;
+		height:100px;
+	}
+.item3{
+	display:flex;
+	background-color:blue;
+	border:none;
+	width:100px;
+	height:100px;
+		padding:5PX;
+}
+/* General setup for demonstration */
+body {
+    font-family: sans-serif;
+    margin: 20px;
+}
 
-/* Your CSS Code here. */
+/* The PARENT container (holder) */
+.holder {
+    display: flex;             /* Use flexbox for arrangement */
+    flex-wrap: wrap;           /* Allow items to wrap if needed */
+    justify-content: flex-start; /* Aligns items to the start (left) */
+    gap: 10px;                 /* Adds a consistent 10px space between all items */
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Base styles for all items */
+.item {
+    flex-basis: 150px;         /* Gives each item a base width, preventing squashing */
+    flex-grow: 1;              /* Allows items to grow and fill available space */
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    min-height: 80px;
+}
+
+/* Color 1: Green for the first 5 boxes */
+.item:nth-child(-n+5) {
+    background-color: green;
+}
+
+/* Color 2: Red for the 6th box */
+.item:nth-child(6) {
+    background-color: red;
+}
+
+/* Color 3: Blue for the 7th box */
+.item:nth-child(7) {
+    background-color: blue;
+}
