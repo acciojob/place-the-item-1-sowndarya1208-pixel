@@ -39,7 +39,7 @@ body {
     flex-wrap: wrap;           /* Allow items to wrap if needed */
     justify-content: flex-start; /* Aligns items to the start (left) */
     gap: 3px;                 /* Adds a consistent 10px space between all items */
-
+display:flex;
 }
 
 /* Base styles for all items */
