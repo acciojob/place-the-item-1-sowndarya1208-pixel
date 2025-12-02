@@ -2,7 +2,7 @@
 .holder:nth-of-type(1){
 	display:flex;
 	justify-content:space-between;
-	flex-wrap:nowrap;
+	flex-wrap:wrap;
 	}
 .holder:nth-of-type(1) .item:nth-child(1){
 	background-color:green;
