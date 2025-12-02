@@ -28,26 +28,32 @@
 /* General setup for demonstration */
 body {
     font-family: sans-serif;
-    margin: 20px;
+    margin: 0px;
 }
 
 /* The PARENT container (holder) */
 .holder:nth-of-type(2)  {
-    display: flex; 
-/* Use flexbox for arrangement */
-    flex-wrap: wrap;           /* Allow items to wrap if needed */
-  /* Aligns items to the start (left) */
-    gap: 3px; 
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
 }
+.holder:nth-of-type(2) .item:nth-of-type(-n+5){
 /* Color 1: Green for the first 5 boxes */
-.holder:nth-of-type(2) .item:nth-child(-n+5) {
     background-color: green;
 	width:100px;
 	height:100px;
-		padding:5PX;
+		padding:5px;
 	font-weight: bold;
+	border:none;
 }
-
+.holder:nth-of-type(2) .item:nth-of-type(7){
+    background-color: blue;
+	width:100px;
+	height:100px;
+		padding:5px;
+	font-weight: bold;
+	border:none;
+}
 /* Color 2: Red for the 6th box */
 .holder:nth-of-type(2) .item:nth-child(6){
     background-color: red;
@@ -55,13 +61,7 @@ body {
 	height:100px;
 		padding:5PX;
 	font-weight: bold;
+	border:none;
 }
 
-/* Color 3: Blue for the 7th box */
-.holder:nth-of-type(2) .item:nth-child(7) {
-    background-color: blue;
-	width:100px;
-	height:100px;
-		padding:5PX;
-	font-weight: bold;
-}
+
