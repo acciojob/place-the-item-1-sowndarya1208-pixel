@@ -1,67 +1,49 @@
-/* Your #CSS Code here. */
+/* FIRST HOLDER */
 .holder:nth-of-type(1){
-	display:flex;
-	justify-content:space-between;
-	flex-wrap:wrap;
-	}
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+/* FIRST HOLDER ITEMS */
 .holder:nth-of-type(1) .item:nth-child(1){
-	background-color:green;
-	border: none;
-	padding:5PX;
-	width:100px;
-	height:100px;
+    background-color:green;
+    width:100px;
+    height:100px;
 }
 .holder:nth-of-type(1) .item:nth-child(2){
-	background-color:red;
-	padding:5px;
-	border:10px none;
-	width:100px;
-		height:100px;
-	}
+    background-color:red;
+    width:100px;
+    height:100px;
+}
 .holder:nth-of-type(1) .item:nth-child(3){
-	background-color:blue;
-	border:none;
-	width:100px;
-	height:100px;
-		padding:5PX;
+    background-color:blue;
+    width:100px;
+    height:100px;
 }
-/* General setup for demonstration */
-body {
-    font-family: sans-serif;
-    margin: 0px;
-}
-.holder:nth-of-type(2){
-	display:flex;
-	justify-content:space-between;
-	flex-wrap:wrap;
-	}
-/* The PARENT container (holder) */
 
+/* SECOND HOLDER */
+.holder:nth-of-type(2){
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+/* SECOND HOLDER ITEMS */
 .holder:nth-of-type(2) .item:nth-child(-n+5){
-/* Color 1: Green for the first 5 boxes */
     background-color: green;
-	width:100px;
-	height:100px;
-		padding:5px;
-	font-weight: bold;
-	border:none;
+    width:100px;
+    height:100px;
 }
-.holder:nth-of-type(2) .item:nth-child(7){
-    background-color: blue;
-	width:100px;
-	height:100px;
-		padding:5px;
-	font-weight: bold;
-	border:none;
-}
-/* Color 2: Red for the 6th box */
+
 .holder:nth-of-type(2) .item:nth-child(6){
     background-color: red;
-	width:100px;
-	height:100px;
-		padding:5PX;
-	font-weight: bold;
-	border:none;
+    width:100px;
+    height:100px;
 }
 
-
+.holder:nth-of-type(2) .item:nth-child(7){
+    background-color: blue;
+    width:100px;
+    height:100px;
+}
