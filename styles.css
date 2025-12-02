@@ -1,49 +1,45 @@
-/* FIRST HOLDER */
-.holder:nth-of-type(1){
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
+/* Reset / basic */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: sans-serif;
+  padding: 12px;
 }
 
-/* FIRST HOLDER ITEMS */
-.holder:nth-of-type(1) .item:nth-child(1){
-    background-color:green;
-    width:100px;
-    height:100px;
-}
-.holder:nth-of-type(1) .item:nth-child(2){
-    background-color:red;
-    width:100px;
-    height:100px;
-}
-.holder:nth-of-type(1) .item:nth-child(3){
-    background-color:blue;
-    width:100px;
-    height:100px;
+/* --- Make both holders behave as expected --- */
+.holder {
+  display: flex !important;                /* ensure flex is applied */
+  justify-content: space-between;          /* first/last touch edges */
+  flex-wrap: wrap !important;              /* allow wrapping to next row */
+  gap: 10px;                                /* space between wrapped rows/items */
+  padding: 8px 0;
 }
 
-/* SECOND HOLDER */
-.holder:nth-of-type(2){
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
+/* Generic item sizing (prevents squashing) */
+.holder .item {
+  flex: 0 0 auto;       /* do not shrink, size by width/height */
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  border-radius: 6px;
 }
 
-/* SECOND HOLDER ITEMS */
-.holder:nth-of-type(2) .item:nth-child(-n+5){
-    background-color: green;
-    width:100px;
-    height:100px;
-}
+/* First holder specific colors (if you still want them) */
+.holder:first-of-type .item:nth-child(1){ background: green; }
+.holder:first-of-type .item:nth-child(2){ background: red;   }
+.holder:first-of-type .item:nth-child(3){ background: blue;  }
 
-.holder:nth-of-type(2) .item:nth-child(6){
-    background-color: red;
-    width:100px;
-    height:100px;
-}
+/* Second holder colors */
+.holder:nth-of-type(2) .item:nth-child(-n+5){ background: green; }
+.holder:nth-of-type(2) .item:nth-child(6){ background: red; }
+.holder:nth-of-type(2) .item:nth-child(7){ background: blue; }
 
-.holder:nth-of-type(2) .item:nth-child(7){
-    background-color: blue;
-    width:100px;
-    height:100px;
+/* Small responsive tweak so items wrap earlier on small viewports */
+@media (max-width: 420px) {
+  .holder .item { width: 90px; height: 90px; }
 }
