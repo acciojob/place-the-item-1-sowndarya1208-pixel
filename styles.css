@@ -2,10 +2,12 @@
 .holder1{
 	display:flex;
 	justify-content:space-around;
+	flex-wrap:nowrap;
 	}
 .item1{
 	display:flex;
 	background-color:green;
+	
 		border: none;
 	padding:5PX;
 	width:100px;
@@ -36,8 +38,8 @@ body {
 /* The PARENT container (holder) */
 .holder {
     display: flex;             /* Use flexbox for arrangement */
-    flex-wrap: wrap;           /* Allow items to wrap if needed */
-    justify-content: flex-start; /* Aligns items to the start (left) */
+    flex-wrap: nowrap;           /* Allow items to wrap if needed */
+  /* Aligns items to the start (left) */
     gap: 3px;                 /* Adds a consistent 10px space between all items */
 display:flex;
 }
@@ -45,6 +47,7 @@ display:flex;
 /* Base styles for all items */
 .item {
     font-weight: bold;
+	
 	
 }
 
@@ -57,7 +60,7 @@ display:flex;
 }
 
 /* Color 2: Red for the 6th box */
-.item:nth-child(6) {
+.item:nth-child(6){
     background-color: red;
 	width:100px;
 	height:100px;
@@ -65,9 +68,17 @@ display:flex;
 }
 
 /* Color 3: Blue for the 7th box */
-.item:nth-child(7) {
+.item:nth-child(2) {
     background-color: blue;
 	width:100px;
 	height:100px;
 		padding:5PX;
+	position:sticky;
+}
+. items1{
+	display:flex;
+	align-items:column;
+}
+. item:nth-child(1){
+	background-color:green;
 }
